@@ -3,6 +3,6 @@ sudo: false
 jobs:
   include:
     - script:
-      - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD" && \
-          docker build -qf Dockerfile -t $TRAVIS_REPO_SLUG:$TRAVIS_COMMIT . && \
-          docker push $DOCKER_USERNAME/docker-android
+      - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+      - docker build -qf Dockerfile -t $TRAVIS_REPO_SLUG:$TRAVIS_COMMIT .
+      - docker push $DOCKER_USERNAME/docker-android
