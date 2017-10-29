@@ -1,0 +1,9 @@
+sudo: false
+
+jobs:
+  include:
+    - stage: build docker image
+      script:
+      - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+      - docker build -f Dockerfile -t $TRAVIS_REPO_SLUG:$TRAVIS_COMMIT .
+      - docker push $DOCKER_USERNAME/docker-android
