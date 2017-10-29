@@ -1,5 +1,6 @@
 sudo: false
-
+git:
+  depth: 1
 jobs:
   include:
     - script:
