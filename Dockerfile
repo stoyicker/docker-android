@@ -11,7 +11,7 @@ ENV GRADLE_OPTS "-Dorg.gradle.daemon=false"
 ENV ANDROID_HOME "/opt/android"
 ENV PATH "${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools"
 
-# Install any needed packages
+# Install Android-required packages
 RUN apt-get --quiet update --yes
 RUN apt-get --quiet install --yes wget unzip lib32stdc++6 lib32z1
 
@@ -49,3 +49,6 @@ RUN echo y | sdkmanager --update
 
 # Cleaning
 RUN apt-get clean
+
+# Install jq for JSON parsing for releases
+RUN apt-get --quiet install --yes jq
