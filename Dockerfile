@@ -1,8 +1,8 @@
 FROM openjdk:8-jdk
 
 # Install-time-only environment variables
-ARG ANDROID_COMPILE_SDK="26"
-ARG ANDROID_BUILD_TOOLS="26.0.2"
+ARG ANDROID_COMPILE_SDK="27"
+ARG ANDROID_BUILD_TOOLS="27.0.0"
 # Android SDK tools 26.1.1
 ARG ANDROID_SDK_TOOLS="4333796"
 
