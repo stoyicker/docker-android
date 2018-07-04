@@ -43,10 +43,10 @@ RUN echo y | sdkmanager "extras;google;google_play_services"
 # Final update
 RUN echo y | sdkmanager --update
 
-# Install jq, xpath and protobuf compiler for release parsing
+# Install jq, xmlstarlet and protobuf compiler for release parsing
 RUN apt-get --quiet install --yes jq
 RUN apt-get --quiet install --yes protobuf-compiler
-RUN apt-get --quiet install --yes libxml-xpath-perl
+RUN apt-get --quiet install --yes xmlstarlet
 
 # Cleaning
 RUN apt-get clean
