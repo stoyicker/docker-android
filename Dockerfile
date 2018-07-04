@@ -43,12 +43,9 @@ RUN echo y | sdkmanager "extras;google;google_play_services"
 # Final update
 RUN echo y | sdkmanager --update
 
-# ------------------------------------------------------
-# --- Cleanup and rev num
-# ------------------------------------------------------
+# Install jq for JSON parsing and protobuf compiler for releases
+RUN apt-get --quiet install --yes jq
+RUN apt-get --quiet install --yes protobuf-compiler
 
 # Cleaning
 RUN apt-get clean
-
-# Install jq for JSON parsing for releases
-RUN apt-get --quiet install --yes jq
