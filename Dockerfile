@@ -48,5 +48,8 @@ RUN apt-get --quiet install --yes jq
 RUN apt-get --quiet install --yes protobuf-compiler
 RUN apt-get --quiet install --yes xmlstarlet
 
+# Install tree for CI machine debugging
+RUN apt-get --quiet install --yes tree
+
 # Cleaning
 RUN apt-get clean
