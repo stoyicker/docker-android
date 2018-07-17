@@ -48,6 +48,9 @@ RUN apt-get --quiet install --yes jq
 RUN apt-get --quiet install --yes protobuf-compiler
 RUN apt-get --quiet install --yes xmlstarlet
 
+# Install bc for floating point ops and comparisons
+RUN apt-get --quiet install --yes bc
+
 # Install tree for CI machine debugging
 RUN apt-get --quiet install --yes tree
 
